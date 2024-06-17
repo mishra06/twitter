@@ -13,11 +13,12 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />}>
                     <Route path="" element={<Feed />} />
+                    <Route path="/profile" element={<Profile />} />
                     <Route path="/profile/:id" element={<Profile />} />
                 </Route>
                 <Route path="/login" element={<Login />} />
             </Routes>
-        </BrowserRouter>
+    </BrowserRouter>
   );
 }
 
