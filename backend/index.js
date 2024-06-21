@@ -26,7 +26,7 @@ server.use(cookieparser());
 
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://twitter-ks9o.vercel.app"
+  "https://twitter-nine-ashy.vercel.app/"
 ];
 
 const corsOptions = {
