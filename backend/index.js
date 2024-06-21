@@ -24,20 +24,14 @@ mongoose
 
 server.use(cookieparser());
 
+
 const allowedOrigins = [
   "http://localhost:3000",
   "https://twitter-nine-ashy.vercel.app/"
 ];
 
 const corsOptions = {
-  origin: function (origin, callback) {
-    
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  },
+  origin: allowedOrigins.join(','),
   credentials: true,
 };
 
