@@ -1,11 +1,9 @@
 # README
 
 ## Overview
-![GitHub Logo](https://octodex.github.com/images/mona-ctoc.png)
 This repository contains two Express.js routers for handling user and Twitter-related API endpoints.
 
 ### User Endpoints
-![User Endpoints](https://octodex.github.com/images/mona-ctoc.png)
 The user endpoints are responsible for managing user accounts and their interactions with other users.
 
 - **/register**: Creates a new user account.
@@ -18,7 +16,6 @@ The user endpoints are responsible for managing user accounts and their interact
 - **/unfollow/:id**: Unfollows the specified user.
 
 ### Twitter Endpoints
-![Twitter Endpoints](https://octodex.github.com/images/mona-ctoc.png)
 The Twitter endpoints are responsible for managing tweets and user interactions with them.
 
 - **/create**: Creates a new tweet.
@@ -28,28 +25,14 @@ The Twitter endpoints are responsible for managing tweets and user interactions 
 - **/followingtweets/:id**: Retrieves all tweets from users the specified user is following.
 
 ### Authentication
-![Authentication](https://octodex.github.com/images/mona-ctoc.png)
 All endpoints except `/register` and `/login` require authentication using the `isAuthenticated` middleware. This ensures that only authenticated users can access these endpoints.
 
 ### Usage
-![Usage](https://octodex.github.com/images/mona-ctoc.png)
 1. Install the required dependencies by running `npm install` or `yarn install` in your terminal.
 2. Start the server by running `node server.js` or `yarn start` in your terminal.
 3. Use a tool like Postman or cURL to send HTTP requests to the specified endpoints.
 
 ### Notes
-![Notes](https://octodex.github.com/images/mona-ctoc.png)
 - The `isAuthenticated` middleware is used to ensure that only authenticated users can access certain endpoints.
 - The `userController` and `twitterController` controllers handle the business logic for the respective endpoints.
 - The `passport` and `Authentication` modules are not used in this code, but they could be integrated for more advanced authentication and authorization features.
-
-### GitHub Stats
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=mishra06&show_icons=true&theme=dark)
-### GitHub Profile
-![GitHub Profile](https://github-profile-trophy.vercel.app/?username=mishra06&theme=dark)
-
-### Animated GIF
-![Animated GIF](https://raw.githubusercontent.com/mishra06/twitter/master/animated-gif.gif)
-
-### Typewriter Effect
-
