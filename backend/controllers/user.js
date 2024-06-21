@@ -55,8 +55,8 @@ const login = async (req, res) => {
     .cookie("token", token, { expiresIn: "1d", httpOnly: true })
     .json({
       message: `Welcome back ${user.name}`,
-      success: true,
-      token,
+      user,
+      success: true
     });
   // res.json({
   //     success:true,

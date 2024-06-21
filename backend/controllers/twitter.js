@@ -42,7 +42,9 @@ const likeOrDislike = async(req,res)=>{
             // for disliking the tweets
             await TwittterModel.findByIdAndUpdate(tweetId,{$pull:{like:loggedInUserId}});
             return res.status(200).json({
-                message : "dislike your tweet"
+                message : "dislike tweet",
+                success:true
+                
             })
         }
         else{
@@ -50,7 +52,8 @@ const likeOrDislike = async(req,res)=>{
 
             await TwittterModel.findByIdAndUpdate(tweetId,{$push:{like:loggedInUserId}});
             return res.status(200).json({
-                message : "like your tweet"
+                message : " Tweet likes",
+                success:true
             })
         }
         } catch (error) {
