@@ -25,11 +25,27 @@ mongoose
 server.use(cookieparser());
 
 // server.use(cors());
+// 
+
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://twitter-ks9o.vercel.app"
+];
+
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: function (origin, callback) {
+    // Check if the request origin is in the list of allowed origins
+    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
+      callback(null, true);
+    } else {
+      callback(new Error('Not allowed by CORS'));
+    }
+  },
   credentials: true,
 };
+
 server.use(cors(corsOptions));
+
 server.get("/",(req,res)=>{
   res.json({
     msg:"hello world"
