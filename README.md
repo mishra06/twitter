@@ -3,6 +3,10 @@
 ## Overview
 This repository contains two Express.js routers for handling user and Twitter-related API endpoints.
 
+### Base URLs
+- User Endpoints: `/api/v1/user`
+- Twitter Endpoints: `/api/v1/twitter`
+
 ### User Endpoints
 The user endpoints are responsible for managing user accounts and their interactions with other users.
 
