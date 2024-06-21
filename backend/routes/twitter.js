@@ -1,7 +1,4 @@
 const express = require("express");
-
-// const passport = require("../middlewares/auth");
-// const Authentication = require("../middlewares/auth");
 const isAuthenticated = require("../middlewares/auth");
 const twitterController = require("../controllers/twitter");
 

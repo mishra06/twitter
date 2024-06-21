@@ -24,9 +24,6 @@ mongoose
 
 server.use(cookieparser());
 
-// server.use(cors());
-// 
-
 const allowedOrigins = [
   "http://localhost:3000",
   "https://twitter-ks9o.vercel.app"
@@ -34,7 +31,7 @@ const allowedOrigins = [
 
 const corsOptions = {
   origin: function (origin, callback) {
-    // Check if the request origin is in the list of allowed origins
+    
     if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
       callback(null, true);
     } else {
