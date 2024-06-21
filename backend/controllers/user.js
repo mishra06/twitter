@@ -3,9 +3,6 @@ const errorHandler = require("../middlewares/errorHandler");
 const UserModel = require("../models/user");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-// const dotenv = require("dotenv");
-
-// dotenv.config();
 
 const register = async (req, res) => {
   const salt = bcrypt.genSaltSync(10);

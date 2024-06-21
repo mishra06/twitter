@@ -10,8 +10,6 @@ const router = express.Router();
 router.post("/register",userController.Register);
 router.post("/login",userController.Login);
 router.get("/logout",userController.Logout);
-// router.put("/bookmark/:id",Authentication,userController.Bookmark);
-// router.get("/profile/:id",Authentication,userController.GetMyProfile);
 router.put("/bookmark/:id",isAuthenticated,userController.Bookmark);
 router.get("/profile/:id",isAuthenticated,userController.GetMyProfile);
 router.get("/otheruser/:id",isAuthenticated,userController.GetOtherProfile);

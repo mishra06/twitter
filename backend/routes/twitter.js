@@ -13,10 +13,4 @@ router.put("/like/:id",isAuthenticated,twitterController.likeOrDislike);
 router.get("/alltweets/:id",isAuthenticated,twitterController.getAllTweets);
 router.get("/followingtweets/:id",isAuthenticated,twitterController.getFollowingTweets);
 
-// router.post("/create",twitterController.createTweet);
-// router.delete("/delete/:id",twitterController.deleteTweet);
-// router.put("/like/:id",twitterController.likeOrDislike);
-// router.get("/alltweets",twitterController.getAllTweets);
-// router.get("/followingtweets/:id",twitterController.getFollowingTweets);
-
 module.exports = router;

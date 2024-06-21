@@ -34,5 +34,5 @@ server.use(cors(corsOptions));
 server.use("/api/v1/user", registerRouter);
 server.use("/api/v1/twitter", twittterRouter);
 server.listen(process.env.PORT, () => {
-  console.log(`server is running on port ${process.env.PORT}`);
+  console.log(`Twitter is running on port ${process.env.PORT}`);
 });
