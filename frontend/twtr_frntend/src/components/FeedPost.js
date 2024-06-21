@@ -24,10 +24,10 @@ const FeedPost = () => {
         });
         dispatch(getRefresh());
         if(result.data.success){
-          toast.success(result.data.message);
+          toast.success(result?.data?.message);
         }
       } catch (error) {
-        toast.success(error.result.data.message);
+        toast.success(error.result?.data?.message);
         console.log(error);
       }
       setDescription("");

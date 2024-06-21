@@ -25,16 +25,10 @@ mongoose
 server.use(cookieparser());
 
 
-const allowedOrigins = [
-  "http://localhost:3000",
-  "https://twitter-nine-ashy.vercel.app/"
-];
-
 const corsOptions = {
-  origin: allowedOrigins.join(','),
-  credentials: true,
-};
-
+  origin:"https://vercel.com/vibhakar-mishras-projects",
+  credentials:true
+}
 server.use(cors(corsOptions));
 
 server.get("/",(req,res)=>{
