@@ -11,8 +11,9 @@ const useGetMyTweets = (id)=>{
 
     const fetchMyTweets = async()=>{
         try {
+            // axios.defaults.withCredentials = true;
             const result = await axios.get(`${Twitt_Api}/alltweets/${id}`,{
-                withCredentials: true
+                withCredentials: true,
             });
             console.log(result,"usegetprofile");
             dispatch(getAllTweets(result.data.tweets));

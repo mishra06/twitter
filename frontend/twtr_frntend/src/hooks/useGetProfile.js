@@ -21,9 +21,6 @@ const useGetProfile = async(id)=>{
     // fetchMyProfile();
     useEffect(()=>{
         fetchMyProfile();
-        // return (()=>{
-        //     dispatch(getMyProfile(null));
-        // })
     },[id])
     
 }

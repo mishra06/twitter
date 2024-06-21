@@ -24,12 +24,17 @@ mongoose
 
 server.use(cookieparser());
 
-
 const corsOptions = {
-  origin:"https://vercel.com/vibhakar-mishras-projects",
+  origin:"http://localhost:3000",
   credentials:true
 }
 server.use(cors(corsOptions));
+// const corsOptions = {
+//   origin:[process.env.PORT,process.env.MONGO_URL,process.env.JWT_SECRET_KEY],
+//   methods:["GET","POST","PUT","DELETE"],
+//   credentials:true
+// }
+// server.use(cors(corsOptions));
 
 server.get("/",(req,res)=>{
   res.json({

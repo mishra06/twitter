@@ -21,9 +21,6 @@ const useOtherUsers = async(id)=>{
     // fetchMyProfile();
     useEffect(()=>{
         fetchOtherUsers();
-        // return (()=>{
-        //     dispatch(getOtherUsers(null));
-        // })
     },[id])
     
 }
