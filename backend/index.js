@@ -27,7 +27,8 @@ server.use(cookieparser());
 server.use(cors({
   origin: 'https://twitter-nine-ashy.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  headers: ['Content-Type', 'Authorization']
+  headers: ['Content-Type', 'Authorization'],
+  credentials: true
 }));
 
 // const corsOptions = {
