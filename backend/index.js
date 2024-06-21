@@ -30,7 +30,11 @@ const corsOptions = {
   credentials: true,
 };
 server.use(cors(corsOptions));
-
+server.get("/",(req,res)=>{
+  res.json({
+    msg:"hello world"
+  })
+})
 server.use("/api/v1/user", registerRouter);
 server.use("/api/v1/twitter", twittterRouter);
 server.listen(process.env.PORT, () => {
