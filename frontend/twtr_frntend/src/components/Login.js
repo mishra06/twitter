@@ -35,14 +35,14 @@ const Login = () => {
             withCredentials: true
           }
         );
+        console.log(res,"ress");
         dispatch(getUser(res?.data?.user));
-        if(res.data.success){
+        if(res?.data?.success){
           navigate("/");
           toast.success(res.data.message);
         }
         // console.log(res);
       } catch (error) {
-        toast.success(error.response.data.message);
         console.log(error);
       }
     } else {
@@ -63,7 +63,6 @@ const Login = () => {
         }
         // console.log(res);
       } catch (error) {
-        toast.success(error.response.data.message);
         console.log(error);
       }
     }
