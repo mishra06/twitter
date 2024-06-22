@@ -7,7 +7,6 @@ const registerRouter = require("./routes/user");
 const twittterRouter = require("./routes/twitter");
 const cookieparser = require("cookie-parser");
 const cors = require("cors");
-server.use(registerRouter);
 
 server.use(express.urlencoded({ extended: true }));
 
@@ -24,24 +23,24 @@ mongoose
 
 server.use(cookieparser());
 
-server.use(cors({
-  origin: 'https://twitter-nine-ashy.vercel.app',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  headers: ['Content-Type', 'Authorization'],
-  credentials: true
-}));
+// server.use(cors({
+//   origin: 'https://twitter-nine-ashy.vercel.app',
+//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
+//   headers: ['Content-Type', 'Authorization'],
+//   credentials: true
+// }));
 
-// const corsOptions = {
-//   origin:"http://localhost:3000",
-//   credentials:true
-// }
+const corsOptions = {
+  origin:"http://localhost:3000",
+  credentials:true
+}
 // server.use(cors(corsOptions));
 // const corsOptions = {
 //   origin:[process.env.PORT,process.env.MONGO_URL,process.env.JWT_SECRET_KEY],
 //   methods:["GET","POST","PUT","DELETE"],
 //   credentials:true
 // }
-// server.use(cors(corsOptions));
+server.use(cors(corsOptions));
 
 server.get("/",(req,res)=>{
   res.json({

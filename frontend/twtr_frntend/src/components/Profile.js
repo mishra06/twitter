@@ -22,8 +22,13 @@ const Profile = () => {
   const followAndUnfollowHandler = async ()=>{
     if(user.following.includes(id)){
       try {
-        axios.defaults.withCredentials = true;
-        const res = await axios.post(`${User_End_point}/unfollow/${id}`,{id:user?._id});
+        // axios.defaults.withCredentials = true;
+        const res = await axios.post(`${User_End_point}/unfollow/${id}`,{id:user?._id},{
+          headers: {
+            "Content-Type": "application/json"
+          },
+          withCredentials: true
+        });
         dispatch(followingUpdate(id));
         dispatch(getRefresh());
         toast.success(res.data.message);
@@ -33,8 +38,13 @@ const Profile = () => {
       }
     }else {
       try {
-        axios.defaults.withCredentials = true;
-        const res = await axios.post(`${User_End_point}/follow/${id}`,{id:user?._id});
+        // axios.defaults.withCredentials = true;
+        const res = await axios.post(`${User_End_point}/follow/${id}`,{id:user?._id},{
+          headers: {
+            "Content-Type": "application/json"
+          },
+          withCredentials: true
+        });
         dispatch(followingUpdate(id));
         dispatch(getRefresh());
         toast.success(res.data.message);
