@@ -21,7 +21,9 @@ const LeftSide = () => {
     const logoutHndler = async ()=>{
         try {
             // axios.defaults.withCredentials = true;
-            const res = await axios.get(`${User_End_point}/logout`);
+            const res = await axios.get(`${User_End_point}/logout`,{
+                withCredentials:true
+            });
         dispatch(getUser(null));
         dispatch(getOtherUsers(null));
         dispatch(getMyProfile(null));

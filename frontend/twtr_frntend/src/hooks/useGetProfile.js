@@ -13,8 +13,8 @@ const useGetProfile = async(id)=>{
             const result = await axios.get(`${User_End_point}/profile/${id}`,{
                 withCredentials: true
             });
-            console.log(result,"usegetprofile");
-            dispatch(getMyProfile(result.data.user));
+            console.log(result.data.user,"usegetprofileeeee");
+            dispatch(getMyProfile(result.data?.user));
         } catch (error) {
             console.log(error);
         }

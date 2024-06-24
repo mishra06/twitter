@@ -13,7 +13,7 @@ import toast from 'react-hot-toast';
 const Profile = () => {
 
   const {user, profile} = useSelector(store=>store.user);
-  console.log(profile,"profile");
+  console.log(profile,"profileee");
   const {id} = useParams()
   useGetProfile(id);
 
