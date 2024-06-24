@@ -23,19 +23,19 @@ mongoose
 
 server.use(cookieparser());
 
-// server.use(cors({
-//   origin: 'https://twitter-nine-ashy.vercel.app',
-//   methods: ['GET', 'POST', 'PUT', 'DELETE'],
-//   headers: ['Content-Type', 'Authorization'],
-//   credentials: true
-// }));
+server.use(cors({
+  origin: 'https://twitter-nine-ashy.vercel.app',
+  // methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  // headers: ['Content-Type', 'Authorization'],
+  credentials: true
+}));
 
-const corsOptions = {
-  origin:"http://localhost:3000",
-  credentials:true
-}
+// const corsOptions = {
+//   origin:"http://localhost:3000",
+//   credentials:true
+// }
 
-server.use(cors(corsOptions));
+// server.use(cors(corsOptions));
 
 server.get("/",(req,res)=>{
   res.json({
