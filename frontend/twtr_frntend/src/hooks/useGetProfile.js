@@ -5,6 +5,7 @@ import { useDispatch } from "react-redux";
 import { getMyProfile } from "../redux/slices/UserSlice";
 const useGetProfile = async(id)=>{
 
+    console.log("id",id);
     const dispatch = useDispatch();
 
     const fetchMyProfile = async()=>{
@@ -17,6 +18,7 @@ const useGetProfile = async(id)=>{
         } catch (error) {
             console.log(error);
         }
+
     }
     // fetchMyProfile();
     useEffect(()=>{
