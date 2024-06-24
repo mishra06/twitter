@@ -1,7 +1,7 @@
-export const User_End_point = "https://twitter-0pqf.onrender.com/api/v1/user";
-export const Twitt_Api = "https://twitter-0pqf.onrender.com/api/v1/twitter";
-// export const User_End_point = "http://localhost:4000/api/v1/user";
-// export const Twitt_Api = "http://localhost:4000/api/v1/twitter";
+// export const User_End_point = "https://twitter-0pqf.onrender.com/api/v1/user";
+// export const Twitt_Api = "https://twitter-0pqf.onrender.com/api/v1/twitter";
+export const User_End_point = "http://localhost:4000/api/v1/user";
+export const Twitt_Api = "http://localhost:4000/api/v1/twitter";
 
 export const timeSince = (timestamp) => {
     let time = Date.parse(timestamp);

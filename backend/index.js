@@ -31,8 +31,7 @@ server.use(cookieparser());
 // }));
 
 const corsOptions = {
-  origin: 'https://twitter-nine-ashy.vercel.app',
-  // origin:"http://localhost:3000",
+  origin:"http://localhost:3000",
   credentials:true
 }
 
