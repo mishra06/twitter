@@ -22,7 +22,7 @@ const Profile = () => {
   const followAndUnfollowHandler = async ()=>{
     if(user.following.includes(id)){
       try {
-        // axios.defaults.withCredentials = true;
+        
         const res = await axios.post(`${User_End_point}/unfollow/${id}`,{id:user?._id},{
           headers: {
             "Content-Type": "application/json"
