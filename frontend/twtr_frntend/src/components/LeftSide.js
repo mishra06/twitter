@@ -22,7 +22,7 @@ const LeftSide = () => {
         try {
             // axios.defaults.withCredentials = true;
             const res = await axios.get(`${User_End_point}/logout`,{
-                withCredentials:true
+                // withCredentials:true
             });
         dispatch(getUser(null));
         dispatch(getOtherUsers(null));
