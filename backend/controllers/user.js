@@ -49,7 +49,13 @@ const login = async (req, res) => {
   const token = jwt.sign(jwtPayload, process.env.JWT_SECRET_KEY);
   return res
     .status(201)
-    .cookie("token", token, { expiresIn: "1d", httpOnly: true })
+    .cookie("token", token, {
+      maxAge: 15 * 24 * 60 * 60 * 1000,  //ms
+      sameSite: 'none',
+      secure: true,
+      path: '/',
+      // httpOnly: true 
+     })
     .json({
       message: `Welcome back ${user.name}`,
       user,
